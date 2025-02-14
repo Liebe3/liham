@@ -28,14 +28,14 @@ const LetterForWorkers = () => {
                   you're working so hard to achieve.
                 </p>
                 <p>
-                  Your dedication and resilience are inspiring. You rise to
-                  challenges with strength, building a brighter future for
-                  yourself and others. Hard work pays off, leading to new
-                  opportunities and achievements.
+                  Your commitment and determination are truly admirable. You
+                  face challenges with strength, building a brighter future for
+                  yourself and others. Your sacrifices will all be worth it,
+                  leading to new opportunities and achievements.
                 </p>
                 <p>
-                  No matter how tough your environment gets, stay true to
-                  yourself and keep moving forward—you’re stronger than any
+                  No matter how tough your boss or coworkers may be, stay true
+                  to yourself and keep moving forward you’re stronger than any
                   challenge. Be kind to yourself because you deserve it. Believe
                   in your potential and the opportunities ahead.
                 </p>

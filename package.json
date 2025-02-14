@@ -6,8 +6,8 @@
   "homepage": "https://liebe3.github.io/liham/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html",
-    "predeploy": "npm run build",
+    "build": "vite build",
+    "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"

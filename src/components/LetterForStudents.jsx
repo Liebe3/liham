@@ -28,11 +28,11 @@ const Letter = () => {
                   you're working so hard to achieve.
                 </p>
                 <p>
-                  Your dedication in your eyes, the hours you put in, and the
-                  moments you’ve fought through doubt. Every little step you
-                  take, even when it’s hard, is a sign of your courage and
-                  strength. Let me tell you this, there’s a seat waiting for you
-                  at tables you haven’t seen yet.
+                  Your dedication shows in the hours you put in and the moments
+                  you’ve pushed through doubt. Every step you take, even when
+                  it’s hard, is a testament to your courage and strength.
+                  There’s a seat waiting for you at tables you haven’t even seen
+                  yet.
                 </p>
                 <p>
                   You are stronger than you realize, and your future is filled

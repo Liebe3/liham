@@ -30,9 +30,7 @@ const LetterForWorkingStudents = () => {
                 <p>
                   I know it’s hard to study and work at the same time, but it
                   will be worth it. The sacrifices you make now are paving the
-                  way for a brighter, more fulfilling future. Your resilience
-                  and determination are truly inspiring, and every small step
-                  forward is a sign of your strength.
+                  way for a brighter, more fulfilling future.
                 </p>
                 <p>
                   Even when the days are tough, your hard work isn’t going
