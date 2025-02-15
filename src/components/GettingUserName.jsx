@@ -1,83 +1,60 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
-import { FaRegSadCry } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-function GettingUserName() {
-  const [name, setName] = useState("");
-  const [isFamilyChecked, setIsFamilyChecked] = useState(false);
-  const [isStudyChecked, setIsStudyChecked] = useState(false);
-  const [error, setError] = useState("")
+const GettingUserName = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
 
-    if (!isFamilyChecked && !isStudyChecked) {
-      setError("Please select at least one option.");
-      return;
-    }
-    setError("")
-    // Navigate to different routes based on the checkboxes
-    if (isFamilyChecked && isStudyChecked) {
-      navigate("/letter-for-working-students", { state: { userName: name } });
-    } else if (isFamilyChecked) {
-      navigate("/letter-for-workers", { state: { userName: name } });
-    } else if (isStudyChecked) {
-      navigate("/letter", { state: { userName: name } });
-    }
+  const handleVirtualuHug = (e) => {
+    e.preventDefault();
+    navigate("/hug");
   };
 
+  const handleLeteer = (e) =>{
+    e.preventDefault()
+    navigate("/letter")
+  }
+
   return (
-    <div className="container">
-      <div className="row justify-content-center align-items-center min-vh-100">
-        <div className="col-md-6">
-          <div className="card shadow">
-            <div className="card-body">
-              <h2 className="card-title text-center mb-4">
-                Enter your name <FaRegSadCry color="blue" /> {""}
-                <FaHeart color="red" />
-              </h2>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <input
-                    className="form-control form-control-lg"
-                    type="text"
-                    id="name"
-                    value={name}
-                    placeholder="name"
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                  <div className="ms-2 mt-2">
-                    <input
-                      type="checkbox"
-                      checked={isFamilyChecked}
-                      onChange={(e) => setIsFamilyChecked(e.target.checked)}
-                    />{" "}
-                    <label>Nabuhay ng pamilya</label>
-                    <br />
-                    <input
-                      type="checkbox"
-                      checked={isStudyChecked}
-                      onChange={(e) => setIsStudyChecked(e.target.checked)}
-                    />{" "}
-                    <label>Nagaaral nang mabuti</label>
-                    {error ? <p className="text-danger">{error}</p>: null} 
-                  </div>
-                </div>
-                <div className="d-grid">
-                  <button type="submit" className="btn btn-primary btn-lg">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 flex items-center justify-center p-4">
+      <div
+        className={`text-center transition-opacity duration-1000 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-bounce">
+          Belated Happy Valentine's, Yan Yan
+          <FaHeart
+            className="inline-block ml-2 text-red-500 animate-pulse"
+            size={48}
+          />
+        </h1>
+        <p className="text-xl md:text-2xl text-pink-100 mb-8">
+          Sorry, forgot to finish it yesterday.
+        </p>
+        <div className="space-y-4">
+          <button
+            className="bg-white text-pink-500 px-6 py-3 m-2 rounded-full font-semibold text-lg hover:bg-pink-100 transition-colors duration-300"
+            onClick={handleVirtualuHug}
+          >
+            Hug for you
+          </button>
+          <button
+            className="bg-pink-500 text-white px-6 py-3 m-2 rounded-full font-semibold text-lg hover:bg-pink-600 transition-colors duration-300"
+            onClick={handleLeteer}
+          >
+            Letter for you
+          </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default GettingUserName;

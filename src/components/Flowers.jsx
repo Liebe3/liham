@@ -1,16 +1,13 @@
-import { useLocation } from "react-router-dom"
 import { IoMdFlower } from "react-icons/io"
 import "./flowers.css"
 
 const Flowers = () => {
-  const location = useLocation()
-  const { userName } = location.state || { userName: "" }
 
   return (
     <div className="flowers-container">
       <div className="flowers-card">
         <h1 className="flowers-title">
-          Hi, {userName || "there"}! Here's a flower just for you!!! <IoMdFlower className="flower-icon" />
+          Hello Yan Yan! Here's a flower just for you!!! <IoMdFlower className="flower-icon" />
         </h1>
         <div className="image-container">
           <img
